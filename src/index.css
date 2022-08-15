@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-wrapper {
+  height: 500px;
+  width: 300px;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 20px 10px 20px 10px rgba(72, 0, 106, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: colorChanger 1s infinite;
+}
+
+@keyframes colorChanger {
+  0% {box-shadow: 10px  10px 10px 10px green;}
+  20% {box-shadow: 10px 10px  10px 10px yellow;}
+  40% {box-shadow: 10px 10px  10px 10px red;}
+  60% {box-shadow: 10px 10px  10px 10px blue;}
+  80% {box-shadow: 10px 10px  10px 10px pink;}
+  100% {box-shadow: 10px 10px  10px 10px brown;}
+}
+.card-wrapper .card-header {
+  width: 100%;
+  height: 200px;
+  background-color: #ffd700;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.card-text{
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.card-wrapper img {
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  border: 7px solid #ffffff;
+  transition: 2s;
+}
+
+.card-wrapper img:hover {
+  border-radius: 0%;
+  transform: rotate(180deg);
+}
+
+.card-wrapper h1 {
+  font-size: 20px;
+  z-index: 1;
+  font-family: "Roboto Slab", serif;
+  margin-top: 80px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.card-wrapper p {
+  margin-top: 5px;
+  font-style: italic;
+  color: rgb(8, 8, 186);
+}
+
+.card-wrapper span {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-wrapper button {
+  background-color: #ffd700;
+  padding: 10px 30px;
+  border: 1px solid #ffd700;
+  border-radius: 50px;
+  color: #ffffff;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: color 1s;
+  font-weight: 600;
+}
+
+.card-wrapper button:hover {
+  background-color: #ffffff;
+  color: #ffd700;
+  border: 1px solid #3607e0;
+}
